@@ -59,7 +59,7 @@ let spinner;
   const RN_VER = corr[STARTER_VER]['react-native'];
   logger.info(`Run with starter v${STARTER_VER}`);
 
-  initReactNative(commander.init, RN_VER, commander.typescript, commander.npm);
+  if(!initReactNative(commander.init, RN_VER, commander.typescript, commander.npm)) return;
 
   await integrate(commander.init, STARTER_VER, RN_VER, commander.typescript);
 
@@ -97,10 +97,12 @@ function initReactNative(dir, rnv, isTypescript, forceNpm) {
     execSync(command, {stdio: 'inherit'});
   } catch (error) {
     ora('Command "react-native init ..." execution failed.').fail();
+    return false;
   }
 
   readline.moveCursor(process.stdout, 0, -12);
   readline.clearScreenDown(process.stdout);
+  return true;
 }
 
 async function rename(dir) {
