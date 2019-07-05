@@ -3,9 +3,13 @@
 Create react native unimodules apps with no build configuration.
 
 ## Quick Start
-Use npm to install the create-react-native-unimodules-app CLI command line utility:
+If you don't have react-native-cli yet, get it:
 ``` shell
-npm i create-react-native-unimodules-app -g
+npm i -g react-native-cli
+```
+Install the create-react-native-unimodules-app CLI command line utility:
+``` shell
+npm i -g create-react-native-unimodules-app
 ```
 Use the command line interface to generate a new React Native Unimodules project called "AwesomeProject":
 ``` shell
