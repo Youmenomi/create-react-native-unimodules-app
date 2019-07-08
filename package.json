@@ -1,6 +1,6 @@
 {
   "name": "create-react-native-unimodules-app",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Set up a react native unimodules app by running one command.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
