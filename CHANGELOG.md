@@ -1,3 +1,7 @@
+0.1.2 / 2019-07-08
+------------------
+- Update README.md
+
 0.1.1 / 2019-07-08
 ------------------
 - Make the right response when the command "react-native init ..." execution failed.
