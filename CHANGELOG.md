@@ -1,3 +1,7 @@
+0.1.3 / 2019-07-08
+------------------
+- fixed that avoid installing cocoapods dependencies on windows platform.
+
 0.1.2 / 2019-07-08
 ------------------
 - Update README.md
