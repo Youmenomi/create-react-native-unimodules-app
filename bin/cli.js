@@ -65,7 +65,9 @@ let spinner;
 
   execSync(`cd ${commander.init} && ${!getYarnVersionIfAvailable()||commander.npm?'npm':'yarn'} install`, {stdio: 'inherit'});
 
-  execSync(`cd ${path.join(commander.init, 'ios')} && pod install`, {stdio: 'inherit'});
+  if (process.platform === 'darwin') {
+    execSync(`cd ${path.join(commander.init, 'ios')} && pod install`, {stdio: 'inherit'});
+  }
 
   logger.log(`
     ${chalk.cyan(`Run instructions for ${chalk.bold('iOS')}`)}:
